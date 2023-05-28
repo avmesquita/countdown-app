@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { WINDOW_PROVIDERS } from './factory/window-token.factory';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WINDOW_PROVIDERS } from './factory/window-token.factory';
   ],
   imports: [
     BrowserModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ServiceWorkerModule.register('/ngsw-worker.js')
   ],
   providers: [ WINDOW_PROVIDERS ],
   bootstrap: [MainComponent]
