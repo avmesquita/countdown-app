@@ -11,6 +11,9 @@
     "frontend": {
       "projectType": "application",
       "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        },
         "@schematics/angular:component": {
           "style": "scss"
         }
@@ -37,7 +40,9 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {

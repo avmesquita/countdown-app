@@ -27,7 +27,7 @@ export class HomeComponent {
   //H.PT = 13
   dataSecundaria = new Date('31/01/2024 17:00:00');
 
-  constructor(private _service: MainService) {
+  constructor(private _service: MainService) {    
     let now = new Date(Date.now()).getTime();
     let dataInicio = now;
     if (now < new Date('10/05/2023 19:00:00').getTime()) {
