@@ -1,0 +1,34 @@
+{
+    "short_name": "Contagem Regressiva",
+    "name": "App Contagem Regressiva",
+    "icons": [
+      {
+        "src": "/assets/icons/maskable_icon_x192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      },
+      {
+        "src": "/assets/icons/maskable_icon_x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "id": "countdown",
+    "start_url": "/",
+    "background_color": "#FFFFFF",
+    "display": "standalone",
+    "display_override": ["window-control-overlay", "minimal-ui"],
+    "orientation": "portrait",
+    "scope": "/",
+    "theme_color": "#008000",
+    "shortcuts": [
+      {
+        "name": "Quanto tempo falta?",
+        "short_name": "Contagem Regressiva",
+        "description": "App de Contagem Regressiva",
+        "url": "/",
+        "icons": [{ "src": "/images/today.png", "sizes": "192x192" }]
+      }
+    ],
+    "description": "App de Contagem Regressiva"
+  }

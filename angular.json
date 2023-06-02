@@ -37,7 +37,8 @@
               "src/favicon.ico",
               "src/assets",
               "src/robots.txt",
-              "src/ads.txt"
+              "src/ads.txt",
+              "src/proxy.conf.json"
             ],
             "styles": [
               "src/styles.scss"
@@ -75,6 +76,10 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "frontend:build",
+            "proxyConfig": "src/proxy.conf.json"
+          },          
           "configurations": {
             "production": {
               "browserTarget": "frontend:build:production"
