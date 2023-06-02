@@ -36,10 +36,22 @@ export class GdprService implements OnDestroy {
   public aceito(): void {
     this.dialog.next(eGdpr.Aceito);
     localStorage.setItem('GDPR', JSON.stringify(eGdpr.Aceito));
+    const evt = {
+      event_category: 'gdpr_approval',
+      event_label: 'setQueryDate',
+      value: 'Aceito'
+    };
+    (<any>this.window).gtag('event', 'gdpr_approval', evt);        
   }
 
   public naoAceito(): void {
     localStorage.clear();
+    const evt = {
+      event_category: 'gdpr_approval',
+      event_label: 'setQueryDate',
+      value: 'Não Aceito'
+    };
+    (<any>this.window).gtag('event', 'gdpr_approval', evt);
     this.window.location.href = 'https://andremesquita.com/';    
   }
 

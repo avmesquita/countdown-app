@@ -31,8 +31,7 @@ export class GdprComponent implements OnDestroy {
   }
 
   aceito(e: any): void {
-    e.preventDefault();
-    console.log('aceito');
+    e.preventDefault();    
     this.gdprService.aceito();
     this.load();
   }

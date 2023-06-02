@@ -17,8 +17,15 @@ export class ContagemRegressivaService implements OnDestroy {
 
   private fromDate: Date = this.dataPrimaria;
 
-  constructor() {
+  constructor(private window: Window) {
     let now = new Date(Date.now()).getTime();    
+    const evt = {
+      event_category: 'query_date',
+      event_label: 'setQueryDate',
+      value: new Date(Date.now()).toDateString()
+    };
+    (<any>this.window).gtag('event', 'query_date', evt);
+
     if (now < this.dataPrimaria.getTime()) {
       this.fromDate = this.dataPrimaria;
     } else {

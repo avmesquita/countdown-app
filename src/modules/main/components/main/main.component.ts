@@ -27,11 +27,22 @@ export class MainComponent implements OnDestroy {
       this.ipService.getIPAddress().subscribe( (data: any) => {
         const user = btoa('ip_' +slugify(data.ip).replaceAll('.','-'));
         (<any>this.window).gtag('set', {'user_id': user });
+        const evt = {
+            event_category: 'user_identified',
+            event_label: 'setUser',
+            value: user
+        };
+        (<any>this.window).gtag('event', 'user_identified', evt);
         localStorage.setItem('userId', user);
       },(error: any) => {
         console.log('Ops!');
       });
     } catch { }
+    /*
+    this.subs.sink = this.ipService.getIP().subscribe( (data: any) => {
+      console.log('getIP => ', data);
+    }, (error: any) => { console.log('getIP',error); });
+    */
   }
 
   ngOnDestroy(): void {

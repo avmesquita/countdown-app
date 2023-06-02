@@ -10,7 +10,11 @@ export class IpService {
   constructor(private http: HttpClient) { }
 
   getIPAddress(): Observable<any> {
-    return this.http.get("https://ip.andremesquita.com");
+    return this.http.get("https://ip.andremesquita.com/");
+  }
+
+  getIP(): Observable<any> {
+    return this.http.get("/api/ip/");
   }
   
 }
