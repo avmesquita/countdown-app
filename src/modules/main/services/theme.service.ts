@@ -18,7 +18,7 @@ export class ThemeService implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-      //console.log('unsubscribe occurs');
+      console.log('unsubscribe occurs');
       try {
         this.subs.unsubscribe();
       } catch (error) {
@@ -26,8 +26,7 @@ export class ThemeService implements OnDestroy {
       }          
   }
 
-  private loadThemeFromLocalStorage(): void {
-    debugger;
+  private loadThemeFromLocalStorage(): void {    
     try {
       const cache = localStorage.getItem('theme');
       if (cache) {        
@@ -40,8 +39,7 @@ export class ThemeService implements OnDestroy {
     }
   }
 
-  private setTheme(theme: eTheme): void {
-    debugger;
+  private setTheme(theme: eTheme): void {    
     try {
       this.theme.next(theme);
       this.setThemeToBodyElement(theme);
@@ -56,8 +54,7 @@ export class ThemeService implements OnDestroy {
   };
 
   private setThemeToBodyElement(theme: eTheme): void {
-    try {
-      debugger;
+    try {      
       const body = window.document.getElementById('main-theme');
       if (body && theme === eTheme.Dark) {
         body.classList.add('dark-theme');

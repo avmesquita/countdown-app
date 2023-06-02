@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, enableProdMode } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,12 @@ export class MainService {
   applicationTitle: string = '';
 
   constructor() {
-    this.applicationTitle = 'solid-frontend-base-angular-modular';
-   }
+    this.applicationTitle = 'Contagem Regressiva';
+  }
+
+  productionMode(): void {    
+    enableProdMode();
+  }
+
 
 }
