@@ -1,0 +1,24 @@
+.gdpr-dialog {
+    width: 80%;
+    height: 50px!important;
+    background-color: green;
+    color: lightyellow;
+    bottom: 50px;
+    position: absolute;
+    border-radius: 21px;
+    text-align: center;
+    font-family: cursive;
+    left: 9%;
+
+    .p {
+        padding-top: 7px;
+    }
+    
+    @media only screen 
+        and (min-device-width: 320px) 
+        and (max-device-width: 480px)
+        and (-webkit-min-device-pixel-ratio: 2) {
+        height: 80px!important;
+    }
+}
+

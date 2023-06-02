@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnDestroy } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { eTheme } from '../../enum/etheme.enum';
 import { ThemeService } from '../../services/theme.service';
 import { SubSink } from 'subsink';
@@ -8,22 +8,17 @@ import { SubSink } from 'subsink';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements AfterViewInit, OnDestroy {
+export class HeaderComponent implements OnDestroy {
   
   @Input('theme') theme?: eTheme;
-  
+
   private subs = new SubSink();
 
   constructor(private themeService: ThemeService) {
-
   }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();
-  }
-
-  ngAfterViewInit(): void {
-    console.log('TEMA SELECIONADO EM HEADER AfterViewInit = ', this.theme);
   }
   
   changeTheme(event: any): void {    
@@ -35,8 +30,7 @@ export class HeaderComponent implements AfterViewInit, OnDestroy {
     }
     this.subs.sink = this.themeService.theme$.subscribe( (theme: any) => {
       this.theme = theme;
-      console.log('TEMA SELECIONADO EM HEADER changeTheme = ', this.theme);      
-    });    
+    });
   }
 
 }
