@@ -1,4 +1,6 @@
-<app-header></app-header>
-<div class="content" role="main">
-  <router-outlet></router-outlet>
+<div [ngClass]="isThemeIsLight() ? 'light-theme' : 'dark-theme' ">
+  <app-header [theme]="theme"></app-header>
+  <div class="content" role="main" [ngClass]="isThemeIsLight() ? 'light-theme' : 'dark-theme' ">
+    <router-outlet></router-outlet>
+  </div>
 </div>
