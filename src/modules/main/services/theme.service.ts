@@ -27,11 +27,12 @@ export class ThemeService implements OnDestroy {
   }
 
   private loadThemeFromLocalStorage(): void {
+    debugger;
     try {
       const cache = localStorage.getItem('theme');
-      if (cache) {
-        this.theme.next(JSON.parse(cache));
-      } else {
+      if (cache) {        
+        this.setTheme(JSON.parse(cache));
+      } else {        
         this.setTheme(eTheme.Light);
       }
     } catch (error) {
@@ -40,10 +41,11 @@ export class ThemeService implements OnDestroy {
   }
 
   private setTheme(theme: eTheme): void {
+    debugger;
     try {
       this.theme.next(theme);
-      localStorage.setItem('theme',JSON.stringify(theme));
       this.setThemeToBodyElement(theme);
+      localStorage.setItem('theme',JSON.stringify(theme));      
     } catch (error) {
       console.log('setTheme error => ', error);
     }
@@ -55,11 +57,14 @@ export class ThemeService implements OnDestroy {
 
   private setThemeToBodyElement(theme: eTheme): void {
     try {
+      debugger;
       const body = window.document.getElementById('main-theme');
       if (body && theme === eTheme.Dark) {
+        body.classList.add('dark-theme');
         body.style.backgroundColor = 'black';
       } else
-      if (body && theme === eTheme.Light) {    
+      if (body && theme === eTheme.Light) {
+        body.classList.remove('dark-theme');
         body.style.backgroundColor = 'white';
       }
     } catch (error) {

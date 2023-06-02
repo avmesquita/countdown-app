@@ -1,0 +1,87 @@
+{
+  "configVersion": 1,
+  "timestamp": 1685303919618,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/favicon.ico",
+        "/index.html",
+        "/main.5ebd19372490ad34.js",
+        "/polyfills.794d7387aea30963.js",
+        "/runtime.89bfad0fe920d2c9.js",
+        "/styles.5e20c32a753fec5d.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/icons/maskable_icon.png",
+        "/assets/icons/maskable_icon_x128.png",
+        "/assets/icons/maskable_icon_x192.png",
+        "/assets/icons/maskable_icon_x384.png",
+        "/assets/icons/maskable_icon_x48.png",
+        "/assets/icons/maskable_icon_x512.png",
+        "/assets/icons/maskable_icon_x512.svg",
+        "/assets/icons/maskable_icon_x72.png",
+        "/assets/icons/maskable_icon_x96.png",
+        "/assets/images/costao.jpg",
+        "/assets/images/maskable_icon_x512.svg",
+        "/assets/manifest.json"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/assets/icons/maskable_icon.png": "8efac7c3135e1058e3576720501259fe5206eb3a",
+    "/assets/icons/maskable_icon_x128.png": "2002d910b87103756708d688360c486a5e909f73",
+    "/assets/icons/maskable_icon_x192.png": "92103d634d1ea716f67b4e79c9b168b7318516f5",
+    "/assets/icons/maskable_icon_x384.png": "aaf220565457125692e08e2f0ab87d833e4a0a30",
+    "/assets/icons/maskable_icon_x48.png": "e2823248b690bf8abc5cea149268d9dfb44f9193",
+    "/assets/icons/maskable_icon_x512.png": "8efac7c3135e1058e3576720501259fe5206eb3a",
+    "/assets/icons/maskable_icon_x512.svg": "6a500931f4fcaee837a1b08d5c258495fb27b2a8",
+    "/assets/icons/maskable_icon_x72.png": "ea822c89fbe0bc0db7dd20c37b4c5f48642b1bb1",
+    "/assets/icons/maskable_icon_x96.png": "43d570e2980a8f433f16bb53eb838c83f98dc7c6",
+    "/assets/images/costao.jpg": "801088905560c5ccd63989a0a27761c9561a7492",
+    "/assets/images/maskable_icon_x512.svg": "6a500931f4fcaee837a1b08d5c258495fb27b2a8",
+    "/assets/manifest.json": "8aac088900d6b3e5a6bcdcb1b8de465fbb12c9fe",
+    "/favicon.ico": "2e563d2409bd422897e352e89e8c4200496cbc51",
+    "/index.html": "834c9a54b8d26836d7804f95e05cfdc8bfe9a55b",
+    "/main.5ebd19372490ad34.js": "c556f17187538c40febda635932c4c229a4d4d81",
+    "/polyfills.794d7387aea30963.js": "0b5d2ac7f91a9b9cac378b1b551f7bce1d1cfa4d",
+    "/runtime.89bfad0fe920d2c9.js": "cedf50c3e04737c71d8b05b4d80ec9ba64003b4d",
+    "/styles.5e20c32a753fec5d.css": "79af6c335b598169d3e000cfca4fb262d189f805"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}

@@ -16,7 +16,7 @@ export class MainComponent implements OnDestroy {
     //enableProdMode();
     this.subs.sink = this.themeService.theme$.subscribe( (theme: any) => {
       this.theme = theme;
-      console.log('TEMA SELECIONADO EM MAIN = ', theme);
+      //console.log('TEMA SELECIONADO EM MAIN = ', theme);
     });
   }
 
