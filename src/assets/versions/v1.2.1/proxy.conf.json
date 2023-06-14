@@ -1,6 +1,0 @@
-{
-  "/api/ip/": {
-    "target": "https://ip.andremesquita.com/",
-    "secure": true
-  }  
-}
