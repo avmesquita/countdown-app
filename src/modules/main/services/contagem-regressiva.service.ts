@@ -13,7 +13,7 @@ export class ContagemRegressivaService implements OnDestroy {
   //H.PT = 23
   private dataPrimaria = new Date('06/05/2023 19:00:00');   
   //H.PT = 13
-  private dataSecundaria = new Date('31/01/2024 17:00:00');
+  private dataSecundaria = new Date('01/31/2024 17:00:00');
 
   private fromDate: Date = this.dataPrimaria;
 

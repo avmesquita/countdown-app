@@ -1,6 +1,8 @@
-# Solid Frontend Base Angular Modular
+# Countdown App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.2 and updated to a *modular-design* view mode.
+
+This app started as a html/javascript (look at /assets/versions/v0.0.1) only and is becoming a progressive application for test purposes.
 
 ## Development server
 
