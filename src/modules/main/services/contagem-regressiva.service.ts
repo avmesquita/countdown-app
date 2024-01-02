@@ -16,19 +16,35 @@ export class ContagemRegressivaService implements OnDestroy {
   private fromDate = new Date;
   private dates: any;
 
+  private isLoaded: boolean = false;
+
   constructor(protected http: HttpClient,
               private window: Window) {
+    this.load();
+  }
 
-    this.getDataset().subscribe( (response: any) => {
-      this.dates = response;
-      const aData = new Date(this.dates[0].data);      
-      this.fromDate = aData;
-      this.app = new ContagemRegressivaModel();
+  private load(): void {
+    this.getDataset().subscribe( (response: any) => {      
+      this.dates = response.sort( (a: any, b: any) => {
+        return Number(a.data) - Number(b.data);
+      });
+      this.dates.forEach( (element: any) => {
+        debugger;
+        const _fromDate = Number(this.fromDate);
+        const _elementData = Number(new Date(element.data));
+        const _dateNumber = Number(new Date());
+        if ( !this.isLoaded && (_fromDate < _elementData) && ( _elementData >=  _dateNumber) )  {
+          this.fromDate = new Date(element.data);
+          console.log("SELETED => ", this.fromDate);
+
+          this.app = new ContagemRegressivaModel();
       
-      this.count_down = this.fromDate ? this.fromDate.getTime() : 0;
-      this.timer = setInterval(() => this.countDown(), 1);
-    });
-    console.log('Tem Easter Egg para o Miguel e para a Julia!');
+          this.count_down = this.fromDate ? this.fromDate.getTime() : 0;
+          this.timer = setInterval(() => this.countDown(), 1);
+          this.isLoaded = true;                    
+        }
+      });
+    });    
   }
 
   ngOnDestroy(): void {

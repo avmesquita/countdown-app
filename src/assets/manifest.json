@@ -1,8 +1,8 @@
 {
     "id": "countdown",
-    "short_name": "Contagem Regressiva",
-    "name": "App Contagem Regressiva",
-    "description": "App de Contagem Regressiva",
+    "short_name": "Countdown App",
+    "name": "Andre Mesquita´s Countdown App",
+    "description": "Countdown Web Application",
     "start_url": "/",    
     "background_color": "#FFFFFF",
     "display": "standalone",
@@ -53,8 +53,8 @@
     "shortcuts": [
       {
         "name": "Quanto tempo falta?",
-        "short_name": "Contagem Regressiva",
-        "description": "App de Contagem Regressiva",
+        "short_name": "Countdown App",
+        "description": "Countdown Web Application",
         "url": "/",
         "icons": [{ "src": "/assets/icons/maskable_icon_x192.png", "sizes": "192x192" }]
       }
