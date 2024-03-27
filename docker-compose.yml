@@ -1,0 +1,11 @@
+name: "avm-countdown-app"
+version: "3"
+services:
+  webapp:
+    build:
+      tags:
+        - "avm-countdown-app:1.0"
+        - "avm-countdown-app"
+    image: avmesquita/avm-countdown-app
+    ports:
+      - 80:80
